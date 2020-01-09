@@ -5,7 +5,7 @@ export const ContainerWrapper = styled.section`
   margin: 0 auto;
   height: calc(100vh - 63px);
   padding-top: 40px;
-  `
+`
 
 export const ContainerHeader = styled.div`
   width: 100%;

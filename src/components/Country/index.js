@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+// import axios from 'axios';
 
 import * as S from './styled'
 
@@ -6,12 +7,15 @@ const Country = () => {
 
   const [data, setData] = useState([]);
 
-  useEffect(async () => {
-    const response = await fetch("https://restcountries.eu/rest/v2/all");
-    const data = await response.json();
+  useEffect(() => {
+    const fetchData = async () => {
+      const response = await fetch("https://restcountries.eu/rest/v2/all");
+      const data = await response.json();
 
-    setData(data);
-  }, []);
+      setData(data);
+    }
+    fetchData();
+  }, [])
 
   return (
     <S.CountryWrapper>
@@ -22,10 +26,14 @@ const Country = () => {
             <S.CountryTitle>{item.name}</S.CountryTitle>
             <S.CountryListInfo>
               <S.CountryInfoItem>
-                Population: {item.population}
+                <S.CountryInfoTitle>Population:</S.CountryInfoTitle> {item.population}
               </S.CountryInfoItem>
-              <S.CountryInfoItem>Region: {item.region}</S.CountryInfoItem>
-              <S.CountryInfoItem>Capital: {item.capital}</S.CountryInfoItem>
+              <S.CountryInfoItem>
+                <S.CountryInfoTitle>Region:</S.CountryInfoTitle> {item.region}
+              </S.CountryInfoItem>
+              <S.CountryInfoItem>
+                <S.CountryInfoTitle>Capital:</S.CountryInfoTitle> {item.capital}
+              </S.CountryInfoItem>
             </S.CountryListInfo>
           </S.CountryInfo>
         </S.CountryItem>

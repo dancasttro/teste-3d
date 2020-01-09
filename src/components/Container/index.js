@@ -1,5 +1,5 @@
 import React from 'react'
-import Search from '../search'
+import Search from '../Search'
 import Filter from '../Filter'
 import Countries from '../Countries'
 

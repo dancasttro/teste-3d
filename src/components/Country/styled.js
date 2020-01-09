@@ -31,3 +31,7 @@ export const CountryTitle = styled.h1`
 export const CountryInfoItem = styled.li`
   margin: 5px 0;
 `
+
+export const CountryInfoTitle = styled.span`
+  font-weight: 800;
+`;
