@@ -7,7 +7,7 @@ export const CountryWrapper = styled.section`
 `;
 
 export const CountryItem = styled.section`
-  background-color: #fff;
+  background-color: ${({ theme }) => theme.bkgElements};
   border-radius: 5px;
 `;
 

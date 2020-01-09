@@ -8,7 +8,7 @@ export const SearchWrapper = styled.div`
 `
 
 export const IconSearch = styled(Search)`
-  color: #757575;
+  color: ${({ theme }) => theme.text};
   width: 15px;
   position: absolute;
   left: 20px;
@@ -20,6 +20,7 @@ export const Input = styled.input`
   width: 300px;
   border: none;
   border-radius: 5px;
-  box-shadow: 0 0 5px 0 #ccc;
+  box-shadow: 0 0 5px 0 ${({ theme }) => theme.body};
   padding: 18px 25px 18px 50px;
-`
+  background-color: ${({ theme }) => theme.bkgElements};
+`;

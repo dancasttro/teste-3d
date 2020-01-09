@@ -11,17 +11,17 @@ export const FilterWrapper = styled.div`
 
 export const FilterTitle = styled.span`
   border-radius: 5px;
-  background-color: #fff;
-  box-shadow: 0 0 5px 0 #ccc;
+  background-color: ${({ theme }) => theme.bkgElements};
+  box-shadow: 0 0 5px 0 ${({ theme }) => theme.body};
   padding: 15px 50px 15px 25px;
   display: block;
 `;
 
 export const FilterList = styled.ul`
   margin-top: 5px;
-  background-color: #fff;
+  background-color: ${({ theme }) => theme.bkgElements};
   border-radius: 5px;
-  box-shadow: 0 0 5px 0 #ccc;
+  box-shadow: 0 0 5px 0 ${({ theme }) => theme.body};
   padding: 15px 50px 15px 25px;
   position: absolute;
   width: 100%;
