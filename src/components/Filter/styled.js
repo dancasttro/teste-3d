@@ -1,12 +1,16 @@
 import styled from 'styled-components'
 import { KeyboardArrowDown } from 'styled-icons/material/KeyboardArrowDown'
+import media from 'styled-media-query'
 
 export const FilterWrapper = styled.div`
   float: right;
   position: relative;
-  /* border-radius: 5px;
-  box-shadow: 0 0 5px 0 #ccc;
-  padding: 15px 50px 15px 25px; */
+
+   ${media.lessThan("small")`
+    float: left;
+    left: -30px;
+    top: -10px;
+  `}
 `;
 
 export const FilterTitle = styled.span`

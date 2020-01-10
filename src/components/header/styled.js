@@ -11,6 +11,10 @@ export const Header = styled.div`
   max-width: 980px;
   margin: 0 auto;
   height: 60px;
+
+  @media (max-width: 600px) {
+    width: 100%;
+  }
 `;
 
 export const H1 = styled.h1`

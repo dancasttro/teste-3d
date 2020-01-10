@@ -26,4 +26,9 @@ export default createGlobalStyle`
     color: ${({ theme }) => theme.text};
     transition: all 0.25s linear;
   }
+
+  a {
+    color: ${({ theme }) => theme.text};
+    text-decoration: none;
+  }
 `;

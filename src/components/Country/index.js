@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-// import axios from 'axios';
+import { Link } from 'react-router-dom'
 
 import * as S from './styled'
 
@@ -20,23 +20,29 @@ const Country = () => {
   return (
     <S.CountryWrapper>
       {data.map(item => (
-        <S.CountryItem>
-          <S.CountryImg src={item.flag} alt="test" />
-          <S.CountryInfo>
-            <S.CountryTitle>{item.name}</S.CountryTitle>
-            <S.CountryListInfo>
-              <S.CountryInfoItem>
-                <S.CountryInfoTitle>Population:</S.CountryInfoTitle> {item.population}
-              </S.CountryInfoItem>
-              <S.CountryInfoItem>
-                <S.CountryInfoTitle>Region:</S.CountryInfoTitle> {item.region}
-              </S.CountryInfoItem>
-              <S.CountryInfoItem>
-                <S.CountryInfoTitle>Capital:</S.CountryInfoTitle> {item.capital}
-              </S.CountryInfoItem>
-            </S.CountryListInfo>
-          </S.CountryInfo>
-        </S.CountryItem>
+        <Link to={`/preview/${item.alpha2Code}`}>
+          <S.CountryItem>
+            <S.CountryImgWrapper>
+              <S.CountryImg src={item.flag} alt="test" />
+            </S.CountryImgWrapper>
+            <S.CountryInfo>
+              <S.CountryTitle>{item.name}</S.CountryTitle>
+              <S.CountryListInfo>
+                <S.CountryInfoItem>
+                  <S.CountryInfoTitle>Population:</S.CountryInfoTitle>{" "}
+                  {item.population}
+                </S.CountryInfoItem>
+                <S.CountryInfoItem>
+                  <S.CountryInfoTitle>Region:</S.CountryInfoTitle> {item.region}
+                </S.CountryInfoItem>
+                <S.CountryInfoItem>
+                  <S.CountryInfoTitle>Capital:</S.CountryInfoTitle>{" "}
+                  {item.capital}
+                </S.CountryInfoItem>
+              </S.CountryListInfo>
+            </S.CountryInfo>
+          </S.CountryItem>
+        </Link>
       ))}
     </S.CountryWrapper>
   );
