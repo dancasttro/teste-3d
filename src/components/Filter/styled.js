@@ -16,6 +16,7 @@ export const FilterWrapper = styled.div`
 export const FilterTitle = styled.button`
   border-radius: 5px;
   background-color: ${({ theme }) => theme.bkgElements};
+  color: ${({ theme }) => theme.text};
   box-shadow: 0 0 5px 0 ${({ theme }) => theme.body};
   padding: 18px 50px 18px 25px;
   display: block;
