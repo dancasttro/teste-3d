@@ -7,7 +7,7 @@ const Countries = () => (
   <S.CountriesWrapper>
     <Country />
   </S.CountriesWrapper>
-)
+);
 
 
 export default Countries

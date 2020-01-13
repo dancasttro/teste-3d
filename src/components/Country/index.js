@@ -17,6 +17,7 @@ const Country = () => {
     fetchData();
   }, [])
 
+
   return (
     <S.CountryWrapper>
       {data.map(item => (

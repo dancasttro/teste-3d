@@ -7,7 +7,7 @@ import { useDarkMode } from './useDarkMode'
 import Layout from './components/Layout'
 import Header from './components/Header'
 import Container from './components/Container'
-import Sobre from './components/Sobre'
+import Details from './components/Details'
 
 function App() {
   const [theme, toggleTheme] = useDarkMode();
@@ -20,7 +20,7 @@ function App() {
         <BrowserRouter>
           <Switch>
             <Route path="/" exact={true} component={Container} />
-            <Route path="/preview/:countryId" component={Sobre} />
+            <Route path="/preview/:countryId" component={Details} />
           </Switch>
         </BrowserRouter>
       </Layout>

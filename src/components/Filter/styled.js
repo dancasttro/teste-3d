@@ -13,12 +13,13 @@ export const FilterWrapper = styled.div`
   `}
 `;
 
-export const FilterTitle = styled.span`
+export const FilterTitle = styled.button`
   border-radius: 5px;
   background-color: ${({ theme }) => theme.bkgElements};
   box-shadow: 0 0 5px 0 ${({ theme }) => theme.body};
-  padding: 15px 50px 15px 25px;
+  padding: 18px 50px 18px 25px;
   display: block;
+  border: none;
 `;
 
 export const FilterList = styled.ul`
@@ -26,7 +27,7 @@ export const FilterList = styled.ul`
   background-color: ${({ theme }) => theme.bkgElements};
   border-radius: 5px;
   box-shadow: 0 0 5px 0 ${({ theme }) => theme.body};
-  padding: 15px 50px 15px 25px;
+  padding: 18px 50px 18px 25px;
   position: absolute;
   width: 100%;
 `;
@@ -40,5 +41,5 @@ export const IconArrowDown = styled(KeyboardArrowDown)`
   position: absolute;
   width: 20px;
   right: 8px;
-  top: 15px;
+  top: 16px;
 `;

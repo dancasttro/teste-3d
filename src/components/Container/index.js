@@ -5,7 +5,6 @@ import Countries from '../Countries'
 
 import * as S from './styled'
 
-
 const Container = () => (
   <S.ContainerWrapper>
     <S.ContainerHeader>
